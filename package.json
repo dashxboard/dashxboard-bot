@@ -1,0 +1,29 @@
+{
+  "name": "@dashxboard/bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node build/index.js",
+    "dev": "NODE_OPTIONS='--loader ts-node/esm' nodemon index.ts",
+    "register": "node --loader ts-node/esm ./register.ts",
+    "dev:register": "nodemon --exec node --loader ts-node/esm ./register.ts"
+  },
+  "dependencies": {
+    "@dashxboard/db": "git+https://${GITHUB_TOKEN}:x-oauth-basic@github.com/dashxboard/dashxboard-db.git#main",
+    "@faker-js/faker": "^9.3.0",
+    "debug": "^4.4.0",
+    "discord.js": "^14.17.3",
+    "dotenv": "^16.4.7",
+    "lru-cache": "^11.0.2",
+    "ts-dedent": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "@types/node": "^20",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
