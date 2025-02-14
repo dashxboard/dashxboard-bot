@@ -14,7 +14,7 @@
     "@dashxboard/db": "git+https://${GITHUB_TOKEN}:x-oauth-basic@github.com/dashxboard/dashxboard-db.git#main",
     "@faker-js/faker": "^9.3.0",
     "debug": "^4.4.0",
-    "discord.js": "^14.17.3",
+    "discord.js": "^14.18.0",
     "dotenv": "^16.4.7",
     "lru-cache": "^11.0.2",
     "ts-dedent": "^2.2.0"
