@@ -54,7 +54,7 @@ const FAQ_INTRODUCTION = new EmbedBuilder()
       value: dedent`
         Dashxboard was created as an 'open-source' project as part of a bounty from the SHx [Ecosystem Development Program (EDP)](https://docs.shx.stronghold.co/ecosystem/edp).
 
-        Its goal is to promote transparency and community involvement by providing a space that support active participation and collective decision-making.
+        Its goal is to promote transparency and community involvement by providing a space that supports active participation and collective decision-making.
     `,
     }
   );
@@ -166,13 +166,21 @@ const FAQ_PROPOSALS = new EmbedBuilder()
 
         → **Paused**: To keep the forum well-organized, proposals are continuously monitored. A proposal enters this stage when it remains inactive for over 5 days.
 
-        → **Concluded**: Once the community achieves consensus and finalizes the discussion, establishing a definitive record of the proposal.
+        → **Concluded**: Once the community achieves consensus and the discussion is finalized, a definitive record of the proposal is established. The proposal may then progress to a *Preliminary Vote*, as explained next.
     `,
   })
   .addFields({
     name: "🔹 What happens when a community proposal concludes?",
     value: dedent`
-        This will be determined based on the outcome of the vote for the official governance proposal 4. [Learn more here](https://docs.shx.stronghold.co/governance/proposals/4-adoption-of-proposed-shx-governance-rules).
+        When a community proposal reaches the **Concluded** stage, what happens next depends on whether it progressed through the governance process:
+        
+        → If the proposal remains a discussion without advancing to a vote, it serves as a reference for the community but does not lead to any binding action.
+        
+        → If the proposal moves to a **Preliminary Vote** but fails to meet the endorsement threshold (50% + 1 of the Quorum requirement), it does not proceed to governance voting.
+        
+        → If the proposal passes the **Preliminary Vote**, it advances to the **Governance Vote** and is uploaded into the [SHx Voting Tool](https://vote.stronghold.co) for an official, binding decision on the Stellar Network. The results of this vote determine the final action taken on the proposal.
+        
+        Regardless of the outcome, concluded proposals remain part of the historical governance record and may shape future discussions and decisions.
     `,
   });
 
@@ -206,7 +214,7 @@ const RESOURCES_DASHXBOARD = new EmbedBuilder()
     name: "Links, resources, and more:",
     value: dedent`
         → **Website**: https://dashxboard.com
-        → **Discord Community**: https://discord.gg/eJhzDbKbdj
+        → **Discord Community**: https://discord.gg/dashxboard
         → **GitHub Code Repository**: https://github.com/dashxboard
     `,
   });
