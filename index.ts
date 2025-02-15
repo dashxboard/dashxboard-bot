@@ -271,6 +271,30 @@ client.on(Events.MessageCreate, async (message) => {
     message.author.bot ||
     message.channelId !== isMember.GENERAL_CHANNEL_ID ||
     !message.guild
+  ) {
+    return;
+  }
+
+  const content = message.content.trim().toLowerCase();
+  const isExactMatch = wordlist.some(
+    (forbiddenPhrase) => content === forbiddenPhrase.toLowerCase().trim()
+  );
+
+  if (isExactMatch) {
+    try {
+      await message.delete();
+      baseLog(`Deleted exact match message from ${message.author.tag}`);
+    } catch (error) {
+      console.error("Failed to delete message:", error);
+    }
+  }
+});
+
+client.on(Events.MessageCreate, async (message) => {
+  if (
+    message.author.bot ||
+    message.channelId !== isMember.GENERAL_CHANNEL_ID ||
+    !message.guild
   )
     return;
 
